@@ -1,14 +1,19 @@
-let toppings = ['Cheese', 'Pepperoni', 'Garlic', 'Peppers'];
+let toppings = ['Extra Cheese', 'Banana Peppers', 'Onions', 'Italian Sausage'];
 
 // return a string describing the pizza toppings
 function pizza(){
-    return "A delicious pizza with " + toppings[0] + " and " + toppings[1] + " and " + toppings[2] + " and " + toppings[3] + ".";
+    console.log("I'd like to order a pizza with " + toppings.join(' and '))
 };
 
+pizza();
+
 // return an array with all elements capitalized
-let capitalize = toppings.map(function(yum) {
-    return yum.toUpperCase();
+let teams = ['Panthers', 'Hornets', 'Panthers', 'Capitals'];
+let capitalize = teams.map(function(capitalizeEveryTeamInArray) {
+    return capitalizeEveryTeamInArray.toUpperCase();
 });
+
+console.log(capitalize);
 
 // select the body element and style it with jQuery
 $("body").css({
@@ -17,9 +22,10 @@ $("body").css({
 });
 
 // add hyperlink
-$("body").append("<a>New Link</a>");
+$("body").append("<a id='link'>New Link</a>");
 // add href attribute to new hyperlink
 $("a").attr('href', 'https://www.google.com/');
-
-console.log(capitalize);
-console.log(pizza());
+// style 'a' tag with 'link' id
+$('#link').css({
+    "color": "white"
+});
